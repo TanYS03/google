@@ -1,8 +1,8 @@
 
 // ---------- CONFIG ----------
-const CSE_API_KEY = "AIzaSyAf_-oHOODXXa5nxKWKaW1L52pMcBhl7Ds";
-const CSE_CX = "416ac8b8be1444977";
-const GEMINI_KEY = "AIzaSyB-XxF7NU-BLJtezAU8akXdienhSW6f7Co";
+const CSE_API_KEY = "API_KEY";
+const CSE_CX = CX_KEY";
+const GEMINI_KEY = "GEMINI_KEY";
 // ----------------------------
 
 const LAST_RESULTS_KEY = "lastSearchResult";
