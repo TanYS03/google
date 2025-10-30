@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Research Insight Summarizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>Research Insight Summarizer</h2>
+
+  <input id="query" type="text" placeholder="Enter research topic or keyword" />
+  <div class="row">
+    <select id="engineSize">
+      <option value="5">Top 5</option>
+      <option value="10">Top 10</option>
+    </select>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="ms">Malay</option>
+      <option value="zh">Chinese</option>
+    </select>
+  </div>
+
+  <!-- Site Filter UI -->
+  <div id="sitePresets">
+    <h4>Restrict search domains</h4>
+    <div id="checkboxContainer"></div>
+
+    <div style="margin-top: 8px;">
+      <input id="newSiteInput" type="text" placeholder="Add new site (e.g. sciencedirect.com)" />
+      <button id="addSiteBtn">+ Add site</button>
+    </div>
+
+    <button id="addPresetsBtn" style="margin-top: 8px;">Apply Presets</button>
+  </div>
+
+  <button id="searchBtn">Search & Summarize</button>
+  <button id="summarizePageBtn">Summarize current page</button>
+
+  <div style="margin-top:8px;">
+    <input id="urlToSummarize" type="text" placeholder="Paste article URL to summarize (optional)" />
+    <button id="summarizeUrlBtn">Summarize URL</button>
+  </div>
+
+  <div style="margin-top:8px;">
+    <label>Or upload PDF: <input id="pdfFileInput" type="file" accept="application/pdf" /></label>
+  </div>
+
+
+  <div style="margin-top:8px;">
+    <input id="findQuery" type="text" placeholder='Ask e.g. "Find the result of this experiment"' />
+    <button id="findBtn">Find on page</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="result"></div>
+
+  <!-- include pdf.js (one copy) and then popup.js -->
+  <script src="vendors/pdf.min.js" defer></script>
+  <script src="popup-init.js" defer></script>
+
+  <!-- only include popup.js once, after pdf.js is set up -->
+  <script src="popup.js" defer></script>
+</body>
+</html>
